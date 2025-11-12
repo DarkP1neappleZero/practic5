@@ -1,0 +1,20 @@
+import math
+
+def calculate_rectangle_area(weight, height):
+    """ Считает площадь прямоуг """
+    return weight * height
+
+def calculate_circle_area(radius):
+    """ Считает площадь круга """
+    return math.pi * radius * radius
+
+print("Калькулятор площади")
+
+#Прямоугольник
+weight = float(input("Ширина прямоугольника: "))
+height = float(input("Высота прямоугольника: "))
+print(f"Площадь прямоугольника: {calculate_rectangle_area(weight, height)}")
+
+#Круг
+radius = float(input("Радиус круга: "))
+print(f"Площадь круга: {calculate_circle_area(radius)}")
