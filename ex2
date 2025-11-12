@@ -1,0 +1,4 @@
+data = input("Введите ваш вес в (кг) и рост в (м) через пробел: ")
+weight, height = map(float, data.split())
+imt = weight / (height * height)
+print (f"Ваш индекс массы тела (ИМТ): {imt:.1f}")
