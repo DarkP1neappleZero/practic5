@@ -1,0 +1,22 @@
+import math
+def calculate_distante(x1, y1, x2, y2):
+ """ Считает расстояние между двумя точками """
+ return math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
+
+def calculate_triangle_area(a, b, c):
+    """ Считает площадь треугольника по трем сторонам """
+    p = (a + b + c) / 2
+    return math.sqrt(p * (p - a) * (p - b) * (p - c))
+#Ввод координат
+print("Введите координаты трех точек:")
+x1, y1 = map(float, input("Точка A (x y): ").split())
+x2, y2 = map(float, input("Точка B (x y): ").split())
+x3, y3 = map(float, input("Точка C (x y): ").split())
+""" Вычисление сторон """
+ab = calculate_distante(x1, y1, x2, y2)
+bc = calculate_distante(x2, y2, x3, y3)
+ca = calculate_distante(x3, y3, x1, y1)
+
+area = calculate_triangle_area(ab, bc, ca)
+
+print(f"Площадь треуголника: {area:.2f}")
