@@ -1,18 +1,25 @@
 USD_TO_RUB = 95.50
+
 def convert_usd_to_rub(amount_usd):
-    """ Конвертирует сумму из долларов в рубли по текущему курсу
-    """
+    """Конвертирует сумму из долларов в рубли по текущему курсу"""
     amount_rub = amount_usd * USD_TO_RUB
     return amount_rub
+
 def main():
     print("Конвертер валют: USD -> RUB")
     print("=" * 30)
     print(f"Текущий курс 1 USD = {USD_TO_RUB} RUB")
-#Ввод суммы в долларах
-amount_rub = float(input("Введите сумму в долларах:"))
-#Конвертируем через функцию
-amount_usd = convert_usd_to_rub(amount_rub)
-#Вывод результата
-print(f"Результат конвертации:")
-print(f"Сумма в долларах: {amount_usd} USD")
-print(f"Сумма в рублях: {amount_rub} RUB")
+    
+    # Ввод суммы в долларах
+    amount_usd = float(input("Введите сумму в долларах: "))
+    
+    # Конвертируем через функцию
+    amount_rub = convert_usd_to_rub(amount_usd)
+    
+    # Вывод результата
+    print(f"Результат конвертации:")
+    print(f"Сумма в долларах: {amount_usd:.2f} USD")
+    print(f"Сумма в рублях: {amount_rub:.2f} RUB")
+
+# Запуск программы
+main()
